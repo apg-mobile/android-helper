@@ -3,6 +3,9 @@ package com.apg.library.androidhelper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.apg.library.corehelper.Apg;
+import com.apg.library.corehelper.InputServiceHelper;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
