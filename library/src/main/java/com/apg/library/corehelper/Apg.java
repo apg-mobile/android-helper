@@ -11,6 +11,7 @@ public final class Apg {
     private static VibrateServiceHelper vibrateHelperInstance;
     private static MediaHelper mediaHelperInstance;
     private static LogHelper logHelperInstance;
+    private static ToolbarHelper toolbarHelperInstance;
 
     private Apg() {}
 
@@ -57,5 +58,14 @@ public final class Apg {
         }
 
         return logHelperInstance;
+    }
+
+    public static ToolbarHelper toolbar() {
+
+        if (toolbarHelperInstance == null) {
+            toolbarHelperInstance = new ToolbarHelper();
+        }
+
+        return toolbarHelperInstance;
     }
 }
