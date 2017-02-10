@@ -13,6 +13,7 @@ public final class Apg {
     private static LogHelper logHelperInstance;
     private static GoogleServiceHelper googleHelperInstance;
     private static ToolbarHelper toolbarHelperInstance;
+    private static UsbServiceHelper usbServiceHelperInstance;
 
     private Apg() {}
 
@@ -23,6 +24,15 @@ public final class Apg {
         }
 
         return inputHelperInstance;
+    }
+
+    public static UsbServiceHelper usb() {
+
+        if (usbServiceHelperInstance == null) {
+            usbServiceHelperInstance = new UsbServiceHelper();
+        }
+
+        return usbServiceHelperInstance;
     }
 
     public static ConnectivityServiceHelper network() {
