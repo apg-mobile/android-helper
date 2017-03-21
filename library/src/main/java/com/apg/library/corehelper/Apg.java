@@ -13,6 +13,7 @@ public final class Apg {
     private static LogHelper logHelperInstance;
     private static GoogleServiceHelper googleHelperInstance;
     private static ToolbarHelper toolbarHelperInstance;
+    private static ThreadHelper threadHelperInstance;
     private static UsbServiceHelper usbServiceHelperInstance;
 
     private Apg() {}
@@ -87,5 +88,14 @@ public final class Apg {
         }
 
         return toolbarHelperInstance;
+    }
+
+    public static ThreadHelper thread() {
+
+        if (threadHelperInstance == null) {
+            threadHelperInstance = new ThreadHelper();
+        }
+
+        return threadHelperInstance;
     }
 }
