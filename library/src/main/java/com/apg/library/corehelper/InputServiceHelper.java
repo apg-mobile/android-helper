@@ -1,6 +1,7 @@
 package com.apg.library.corehelper;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -28,10 +29,18 @@ public class InputServiceHelper {
                 .hideSoftInputFromWindow(rootView.getWindowToken(), 0);
     }
 
-    public void hideKeyboard(Activity activity, View root){
+    public void hideKeyboard(Activity activity, Dialog dialog){
+
+        View rootView = dialog.findViewById(android.R.id.content);
 
         getInputMethodManager(activity)
-                .hideSoftInputFromWindow(root.getWindowToken(), 0);
+                .hideSoftInputFromWindow(rootView.getWindowToken(), 0);
+    }
+
+    public void hideKeyboard(Activity activity, View view){
+
+        getInputMethodManager(activity)
+                .hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
 
