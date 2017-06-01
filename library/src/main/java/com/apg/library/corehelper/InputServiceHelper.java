@@ -28,7 +28,14 @@ public class InputServiceHelper {
                 .hideSoftInputFromWindow(rootView.getWindowToken(), 0);
     }
 
-    public void toggleHideKeyboard(Activity activity){
+    public void hideKeyboard(Activity activity, View root){
+
+        getInputMethodManager(activity)
+                .hideSoftInputFromWindow(root.getWindowToken(), 0);
+    }
+
+
+    public void toggleKeyboard(Activity activity){
 
         getInputMethodManager(activity)
                 .toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
