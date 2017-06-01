@@ -28,6 +28,12 @@ public class InputServiceHelper {
                 .hideSoftInputFromWindow(rootView.getWindowToken(), 0);
     }
 
+    public void toggleHideKeyboard(Activity activity){
+
+        getInputMethodManager(activity)
+                .toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+    }
+
     public void showKeyboard(EditText edt) {
         getInputMethodManager(edt.getContext())
                 .showSoftInput(edt, InputMethodManager.SHOW_IMPLICIT);
