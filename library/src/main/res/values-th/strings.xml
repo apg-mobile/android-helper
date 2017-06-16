@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="notification_now">เมื่อสักครู่</string>
+    <string name="notification_minute_ago">%d นาทีที่แล้ว</string>
+    <string name="notification_hour_ago">%d ชั่วโมงที่แล้ว</string>
+    <string name="notification_yesterday">เมื่อวาน</string>
+    <string name="notification_day_ago">%d วันที่แล้ว</string>
+
+</resources>

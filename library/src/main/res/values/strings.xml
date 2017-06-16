@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Core Helper</string>
+
+    <string name="notification_now">Now</string>
+    <string name="notification_minute_ago">%d minutes ago</string>
+    <string name="notification_hour_ago">%d hours ago</string>
+    <string name="notification_yesterday">Yesterday</string>
+    <string name="notification_day_ago">%d days ago</string>
 </resources>

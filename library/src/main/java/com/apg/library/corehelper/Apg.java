@@ -15,6 +15,7 @@ public final class Apg {
     private static ToolbarHelper toolbarHelperInstance;
     private static ThreadHelper threadHelperInstance;
     private static UsbServiceHelper usbServiceHelperInstance;
+    private static DateHelper dateHelperInstance;
 
     private Apg() {}
 
@@ -97,5 +98,14 @@ public final class Apg {
         }
 
         return threadHelperInstance;
+    }
+
+    public static DateHelper date() {
+
+        if (dateHelperInstance == null) {
+            dateHelperInstance = new DateHelper();
+        }
+
+        return dateHelperInstance;
     }
 }
