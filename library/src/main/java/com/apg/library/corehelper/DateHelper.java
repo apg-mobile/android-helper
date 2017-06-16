@@ -3,6 +3,7 @@ package com.apg.library.corehelper;
 import android.content.Context;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -12,7 +13,8 @@ import java.util.concurrent.TimeUnit;
 
 public class DateHelper {
 
-     DateHelper(){}
+    DateHelper() {
+    }
 
     public String getNotificationTime(Context context, long ms, String defaultPattern) {
         long now = System.currentTimeMillis();
@@ -35,7 +37,7 @@ public class DateHelper {
 
         long hourAgo = TimeUnit.MILLISECONDS.toHours(result);
         if (hourAgo < 24) {
-            return context.getString(R.string.notification_hour_ago, minuteAgo);
+            return context.getString(R.string.notification_hour_ago, hourAgo);
         }
 
         long dayAgo = TimeUnit.MILLISECONDS.toDays(result);
@@ -46,7 +48,6 @@ public class DateHelper {
         } else {
             return new SimpleDateFormat(defaultPattern).format(new Date(ms).getTime());
         }
-
     }
 
     public String getNotificationTime(Context context, long ms) {
