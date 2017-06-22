@@ -22,7 +22,7 @@ public class DateHelper {
 
         if (result < 0) {
             //Future
-            return new SimpleDateFormat("d-M-yyyy HH:mm").format(new Date(ms).getTime());
+            return new SimpleDateFormat(defaultPattern).format(new Date(ms).getTime());
         }
 
         long secondAgo = TimeUnit.MILLISECONDS.toSeconds(result);
