@@ -50,6 +50,26 @@ public class DateHelper {
         }
     }
 
+    public String getNotificationTimeFacebookStyle(long ms) {
+        long now = System.currentTimeMillis();
+        long result = now - ms;
+
+        long yearAgo = TimeUnit.MILLISECONDS.toDays(result) / 365;
+        if (yearAgo > 0) {
+            //Future
+            return new SimpleDateFormat("d MMM yyyy").format(new Date(ms).getTime());
+        }
+
+        long dayAgo = TimeUnit.MILLISECONDS.toDays(result);
+        if (dayAgo > 0) {
+            //Future
+            return new SimpleDateFormat("d MMM").format(new Date(ms).getTime());
+        }
+
+        return new SimpleDateFormat("H:mm").format(new Date(ms).getTime());
+
+    }
+
     public String getNotificationTime(Context context, long ms) {
         return getNotificationTime(context, ms, "d-M-yyyy HH:mm");
     }
